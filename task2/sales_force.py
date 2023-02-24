@@ -14,9 +14,9 @@ def runner():
     driver.find_element(By.NAME, 'UserLastName').send_keys('wick')
     driver.find_element(By.NAME, 'UserEmail').send_keys('john@gmail.com')
     driver.find_element(By.NAME, 'CompanyName').send_keys('eInfochip PVT LTD')
-    Select(driver.find_element(By.NAME, 'UserTitle')).select_by_value('Developer')
-    Select(driver.find_element(By.NAME, 'CompanyEmployees')).select_by_value('950')
-    Select(driver.find_element(By.NAME, 'CompanyCountry')).select_by_visible_text('Germany')
+    Select(driver.find_element(By.NAME, 'UserTitle')).select_by_value('IT_Manager_AP')
+    Select(driver.find_element(By.NAME, 'CompanyEmployees')).select_by_value('250')
+    Select(driver.find_element(By.NAME, 'CompanyCountry')).select_by_visible_text('United Kingdom')
     driver.find_element(By.NAME, 'start my free trial').click()
     error_message = driver.find_element(By.XPATH, "//span[contains(@id,'UserPhone-')]").text
     assert error_message == 'Enter a valid phone number'
