@@ -16,7 +16,7 @@ def runner():
     print(driver.window_handles[0])
     print(driver.window_handles[1])
 
-    driver.switch_to.window(driver.window_handles[1])
+    driver.switch_to.window(driver.window_handles[0])
 
     driver.find_element(By.ID, "input_username").send_keys("paras")
     driver.find_element(By.ID, "input_password").send_keys("welcome123")
