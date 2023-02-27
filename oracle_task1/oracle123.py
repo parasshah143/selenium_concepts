@@ -5,7 +5,7 @@ import time
 
 def runner():
     # initialize the driver
-    driver = webdriver.Chrome()
+    driver = webdriver.Edge()
     driver.maximize_window()
     driver.implicitly_wait(10)
     driver.get("https://www.oracle.com/in/database/")
@@ -13,6 +13,8 @@ def runner():
     driver.find_element(By.XPATH, "//span[contains(text(),'View Account')]").click()
 
     driver.find_element(By.XPATH, "//a[contains(text(),'Sign-In')]").click()
+
+    time.sleep(5)
 
     print("title")
     # print the title and current url of the page
@@ -34,6 +36,7 @@ def runner():
     print("Error")
     # get and print the error message
     error_message = driver.find_element(By.XPATH, "//span[@id='errormsg']//div[1]").text
+    time.sleep(5)
     print("Error Message: ", error_message)
 
     time.sleep(5)
