@@ -10,6 +10,8 @@ from automationworld_task4 import automationworld123
 from demo3_alert import demo3
 from demo4_frame import demo4_hdfc
 from demo5_advance import demo5_upload
+from demo5_advance import move_over
+from demo5_advance import keyboard_activity
 
 if __name__ == '__main__':
     # demo1_login.runner()
@@ -23,7 +25,9 @@ if __name__ == '__main__':
     # automationworld123.runner()
     # demo3.runner()
     # demo4_hdfc.runner()
-    demo5_upload.runner()
+    # demo5_upload.runner()
+    # move_over.runner()
+    keyboard_activity.runner()
 
 
 

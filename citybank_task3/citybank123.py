@@ -33,19 +33,23 @@ def runner():
 
     driver.find_element(By.XPATH, "//input[@id='cvvnumber']").send_keys("123")
 
-    driver.find_element(By.XPATH, "//input[@id='bill-date-long']").click()
-
-    Select(driver.find_element(By.XPATH, "//select[@class='ui-datepicker-year']")).select_by_value('2022')
-
-    Select(driver.find_element(By.XPATH, "//select[@class='ui-datepicker-month']")).select_by_visible_text('Apr')
-
-    driver.find_element(By.LINK_TEXT, "14").click()
+    # driver.find_element(By.XPATH, "//input[@id='bill-date-long']").click()
+    #
+    # Select(driver.find_element(By.XPATH, "//select[@class='ui-datepicker-year']")).select_by_value('2022')
+    #
+    # Select(driver.find_element(By.XPATH, "//select[@class='ui-datepicker-month']")).select_by_visible_text('Apr')
+    #
+    # driver.find_element(By.LINK_TEXT, "14").click()
+    #
+    driver.execute_script("document.querySelector('#bill-date-long').value='11/09/2000'")
 
     driver.find_element(By.XPATH, "//input[@value='PROCEED']").click()
 
-    error_message = driver.find_element(By.XPATH, "/html/body/div[2]/div[2]/li").text
+    error_message = driver.find_element(By.XPATH, "//li[@contains(text(),'please']").text
     # error_message = driver.find_element(By.CLASS_NAME, "ui-dialog-content ui-widget-content").text
     print("Error Message: ", error_message)
 
     time.sleep(5)
     driver.quit()
+
+
