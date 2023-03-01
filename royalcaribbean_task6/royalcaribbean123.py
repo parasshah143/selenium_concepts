@@ -11,6 +11,9 @@ def runner():
 
     driver.get("https://www.royalcaribbean.com/")
     driver.find_element(By.XPATH, "//div[@class='notification-banner__close']").click()
+    driver.find_element(By.XPATH, "//nav[@class='headerTopNav__menu']//span[contains(text(),'Sign In')]").click()
+    driver.find_element(By.XPATH, "//a[@class='login__create-account login__create-account--royal']").click()
+
 
 
 
