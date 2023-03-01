@@ -16,5 +16,9 @@ def runner():
     action.move_to_element(driver.find_element(By.LINK_TEXT, "Become a Member")).perform()
     driver.find_element(By.LINK_TEXT, "Membership Benefits").click()
 
+
+
+
+
     time.sleep(5)
     driver.quit()

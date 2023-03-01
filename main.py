@@ -12,6 +12,7 @@ from demo4_frame import demo4_hdfc
 from demo5_advance import demo5_upload
 from demo5_advance import move_over
 from demo5_advance import keyboard_activity
+from openemr_task5 import openemr123
 
 if __name__ == '__main__':
     # demo1_login.runner()
@@ -27,7 +28,8 @@ if __name__ == '__main__':
     # demo4_hdfc.runner()
     # demo5_upload.runner()
     # move_over.runner()
-    keyboard_activity.runner()
+    # keyboard_activity.runner()
+    openemr123.runner()
 
 
 
