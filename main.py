@@ -13,6 +13,7 @@ from demo5_advance import demo5_upload
 from demo5_advance import move_over
 from demo5_advance import keyboard_activity
 from openemr_task5 import openemr123
+from royalcaribbean_task6 import royalcaribbean123
 
 if __name__ == '__main__':
     # demo1_login.runner()
@@ -29,7 +30,9 @@ if __name__ == '__main__':
     # demo5_upload.runner()
     # move_over.runner()
     # keyboard_activity.runner()
-    openemr123.runner()
+    # openemr123.runner()
+    royalcaribbean123.runner()
+
 
 
 
