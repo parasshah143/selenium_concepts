@@ -54,5 +54,13 @@ def runner():
 
     driver.switch_to.alert.accept()
 
+    if len(driver.find_elements(By.XPATH, "//div[@class='closeDlgIframe']")) > 0:
+        driver.find_element(By.XPATH, "//div[@class='closeDlgIframe']").click()
+
+    driver.switch_to.frame(driver.find_element(By.XPATH, "//iframe[@name='pat']"))
+
+    actual_added_patient = driver.find_element(By.XPATH, "//i[@class='fa fa-question-circle']/ancestor::h2").text
+    print(actual_added_patient)
+
     time.sleep(5)
     driver.quit()

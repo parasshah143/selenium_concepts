@@ -10,12 +10,15 @@ def runner():
     driver.implicitly_wait(30)
 
     driver.get("https://www.royalcaribbean.com/")
-    driver.find_element(By.XPATH, "//div[@class='notification-banner__close']").click()
-    driver.find_element(By.XPATH, "//nav[@class='headerTopNav__menu']//span[contains(text(),'Sign In')]").click()
-    driver.find_element(By.XPATH, "//a[@class='login__create-account login__create-account--royal']").click()
 
+    driver.find_element(By.ID, "rciHeaderSignIn").click()
+    driver.find_element(By.LINK_TEXT, "Create an account").click()
 
+    driver.find_element(By.XPATH, "//input[@data-placeholder='First name/Given name']").send_keys("bala")
 
+    driver.find_element(By.XPATH, "//span[normalize-space()='Month']").click()
+
+    driver.find_element(By.XPATH, "//span[normalize-space()='December']").click()
 
     time.sleep(5)
     driver.quit()
